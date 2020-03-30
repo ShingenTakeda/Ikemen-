@@ -30,3 +30,17 @@
 *.exe
 *.out
 *.app
+
+
+#Build stuff
+bin
+obj
+.vscode
+conan.lock
+conanbuildinfo.gcc
+conanbuildinfo.premake.lua
+conanbuildinfo.txt
+conaninfo.txt
+graph_info.json
+Ikemen++.make
+Makefile
