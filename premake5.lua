@@ -10,7 +10,7 @@ project("Ikemen++")
 
 		linkoptions { conan_exelinkflags }
 
-		files { "src/**.h", "src/**.cpp" }
+		files { "src/**.hpp", "src/**.cpp" , "sol2/**.hpp"}
 
 		filter "configurations:Debug"
 		defines { "DEBUG" }
