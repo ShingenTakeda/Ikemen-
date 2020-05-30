@@ -1,7 +1,24 @@
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
+
+#include <iostream>
+#include <assert.h>
+#define SOL_ALL_SAFETIES_ON 1
+#include "sol2/sol.hpp"
+
+#include "LuaScript.hpp"
+
 
 int main(void)
 {
+    std::cout << "=== opening a state ===" << std::endl;
+    sol::state lua;
+    lua.open_libraries(sol::lib::base, sol::lib::package);
+    lua.script("print('Hello from lua')");
+
+    std::cout<<std::endl;
+
+    lua.script_file("test.lua");
+
     GLFWwindow* window;
 
     /* Initialize the library */

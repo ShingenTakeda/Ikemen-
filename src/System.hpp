@@ -6,7 +6,7 @@
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 
-//Make
+//Make the SystemDef global
 class System
 {
     struct SystemDef
