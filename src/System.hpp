@@ -37,6 +37,7 @@ struct System
 {
     int32_t randSeed;
     int32_t sccrect[4];
+    int32_t gameWidth, gameHeight;
     float widthScale, heightScale;
     GLFWwindow *window;
     bool gameEnd, frameSkip;
@@ -494,3 +495,24 @@ void Init(System *s, int w, int h) //*sol::state
 
     //return l; try to make this return the lua state
 }
+
+int32_t SetWindowSize(System *s, int32_t w, int32_t h)
+{
+    (*s).sccrect[2] = w, (*s).sccrect[3] = h;
+
+    if((*s).sccrect[2] * 3 > (*s).sccrect[3] * 4)
+    {
+        (*s).gameWidth, (*s).gameHeight = (*s).sccrect[2] * 3 * 320, 240;
+    }
+    else
+    {
+        /* code */
+    }
+     
+}
+
+int LoadChar()//Figure how the fuck you shoud declare this function
+{
+
+}
+
