@@ -18,6 +18,8 @@
 //TODO: put the "type"s golang declarations up here somewhere\
 //TODO: implement a "channel" type
 //OBS:Fuck golang dude
+//OBS:Remember those functions with a System pointer in them? put them in the struct itself as declarations. see:https://www.murrayc.com/permalink/2017/06/28/a-c-developer-looks-at-go-the-programming-language-part-2-modularity-and-object-orientation/
+//
 
 typedef int32_t team_mode;
 typedef std::map<std::string,int32_t> wincnt_map[];
@@ -36,7 +38,7 @@ const int MAX_SIMUL = 32,
 struct System
 {
     int32_t randSeed;
-    int32_t sccrect[4];
+    int32_t scrrect[4];
     int32_t gameWidth, gameHeight;
     float widthScale, heightScale;
     GLFWwindow *window;
@@ -64,15 +66,15 @@ struct System
     //TODO: Wrap all the key codes like here: https://godoc.org/github.com/go-gl/glfw/v3.1/glfw#Key, and pass throgh a map-> std::map<GLFWKey, bool> keyState;
     //NetInput *netInput;
     //FileInput *fileInput;
-    //[MaxSimul*2 + MaxAttachedChar]AiInput aiInput;
+    //[MAX_SIMUL*2 + MAX_ATTACHED_CHAR]AiInput aiInput;
     //KeyConfig[] keyboardConfig;
     //KeyConfig[] joystickConfig;
-    //[MaxSimul*2 + MaxAttachedChar]float32 com;
+    float com[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     bool autoLevel;
     int home;
     int32_t gameTime;
     int32_t match;
-    //[MaxSimul*2 + MaxAttachedChar]int inputRemap;
+    int inputRemap[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     std::string listenPort;
     int32_t round;
     int32_t intro;
@@ -82,17 +84,17 @@ struct System
     int32_t roundsExisted[2];
     int32_t matchDraws;
     Loader loader;
-    //[MaxSimul*2 + MaxAttachedChar][]*Char chars;
+    //Char *chars[][MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     //CharList charList;
-    //[MaxSimul*2 + MaxAttachedChar]CharGlobalInfo cgi
+    //CharGlobalInfo cgi[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     team_mode teamMode[2];
     int32_t numSimul[2], numTurns[2];
     bool esc;
     //sync.Mutex loadMutex;
     bool ignoreMostErrors;
-    //[MaxSimul*2 + MaxAttachedChar]StringPool stringPool;
+    //[MAX_SIMUL*2 + MAX_ATTACHED_CHAR]StringPool stringPool;
     //ByteCodeStack bcStack, bcVarStack;
-    //[]ByteCodeValue bcVar;
+    //ByteCodeValue bcVar[];
     //Char *workingChar;
     //StateByteCode *workingState
     //GlobalSpecialFlag specialFlag;
@@ -121,7 +123,7 @@ struct System
     int32_t envCol[3];
     int32_t envColTime;
     bool envCol_Under;
-    //[MaxSimul*2 + MaxAttachedChar][]string clipBoardText;
+    std::string clipBoardText[][MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     //Stage *stage;
     int32_t helperMax;
     int32_t nextCharID;
@@ -140,7 +142,7 @@ struct System
     bool paused, step;
     bool roundResetFlag;
     bool reloadFlag;
-    //[MaxSimul*2 + MaxAttachedChar]bool reloadCharSlot;
+    bool reloadCharSlot[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     //map[ShortcutKey]*ShortcutScript shortcutScripts;
     float turbo;
     //chan std::string commandLine//TODO:Implement a golang channel equivalent ;
@@ -154,10 +156,10 @@ struct System
     //FinishType finish;
     int32_t waitDown;
     int32_t shutterTime;
-    //[MaxSimul*2 + MaxAttachedChar][]Projectile projs;
-    //[MaxSimul*2 + MaxAttachedChar][]Explod explods;
-    //[MaxSimul*2 + MaxAttachedChar][]int explDrawList;
-    //[MaxSimul*2 + MaxAttachedChar][]int topExplDrawList
+    //[MAX_SIMUL*2 + MAX_ATTACHED_CHAR][]Projectile projs;
+    //[MAX_SIMUL*2 + MAX_ATTACHED_CHAR][]Explod explods;
+    int explDrawList[][MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
+    int topExplDrawList[][MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     int32_t changeStateNest;
     //DrawList sprites;
     //DrawList topSprites;
@@ -167,7 +169,7 @@ struct System
     //ClsnRect drawC2SP;
     //ClsnRect drawMTK;
     //ClsnRect drawWH;
-    //[MaxSimul*2 + MaxAttachedChar]bool autoGuard;
+    bool autoGuard[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     bool clsnDraw;
     float accel;
     bool statusDraw;
@@ -231,9 +233,9 @@ struct System
     int captureNum;
     int challenger;
     //RoundType roundType[];
-    //[MaxSimul*2 + MaxAttachedChar]OverrideCharData ocd;
+    OverrideCharData ocd[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];
     bool allowBGM;
-    //[MaxSimul*2 + MaxAttachedChar]int32 ratioLevel;//->Try to change this to a CapcomvSNK 2 style and maybe a skullgirls kinda of thing
+    int32_t ratioLevel[MAX_SIMUL*2 + MAX_ATTACHED_CHAR];//->Try to change this to a CapcomvSNK 2 style and maybe a skullgirls kinda of thing
     int32_t timerStart;
     int32_t timerRounds[];
     float scoreStart[2];
@@ -296,7 +298,7 @@ struct SelectStage
     std::string name;
     std::string spr;
     std::string attachedCharDef;
-    //StageBGM stageBGM[4];
+    StageBGM stageBGM[4];
     //Sprite *stagePortrait;
     float portraitScale;
     float xScale;
@@ -321,13 +323,13 @@ struct Select
     SelectChar charList[];
     SelectStage stageList[];
     int curStageNo;
-    //->See how to do this: int selected[2][][2];
+    int selected[][2][2];//->See how to do this: int selected[2][][2](this is in golang) 
     int selectedStageNo;
     int16_t sPorTrait[2];
     int16_t vsPortrait[2];
     int16_t stagePortait[2];
     //std::map<std::string, Anim> aPortrait;
-    //std::string cDefOverwrite[MaxSimul * 2];
+    std::string cDefOverwrite[MAX_SIMUL * 2];
     std::string sDefOverwrite;
     StageBGM stageBGM[5];
 };
@@ -383,14 +385,14 @@ void Init(System *s, int w, int h) //*sol::state
     {
         if((*s).fullscreen)
         {
-            (*s).window = glfwCreateWindow((int)(*s).sccrect[2],
-                                            (int)(*s).sccrect[3],
+            (*s).window = glfwCreateWindow((int)(*s).scrrect[2],
+                                            (int)(*s).scrrect[3],
                                             (*s).windowTitle.c_str(), glfwGetPrimaryMonitor(), NULL);
         }
         else
         {
-            (*s).window = glfwCreateWindow((int)(*s).sccrect[2],
-                                            (int)(*s).sccrect[3],
+            (*s).window = glfwCreateWindow((int)(*s).scrrect[2],
+                                            (int)(*s).scrrect[3],
                                             (*s).windowTitle.c_str(),
                                             NULL,
                                             NULL);
@@ -498,17 +500,50 @@ void Init(System *s, int w, int h) //*sol::state
 
 int32_t SetWindowSize(System *s, int32_t w, int32_t h)
 {
-    (*s).sccrect[2] = w, (*s).sccrect[3] = h;
+    (*s).scrrect[2] = w, (*s).scrrect[3] = h;
 
-    if((*s).sccrect[2] * 3 > (*s).sccrect[3] * 4)
+    if((*s).scrrect[2] * 3 > (*s).scrrect[3] * 4)
     {
-        (*s).gameWidth, (*s).gameHeight = (*s).sccrect[2] * 3 * 320, 240;
+        (*s).gameWidth, (*s).gameHeight = (*s).scrrect[2] * 3 * 320 / ((*s).scrrect[3] * 4), 240;
     }
     else
     {
-        /* code */
+        (*s).gameWidth, (*s).gameHeight = 320, (*s).scrrect[3] * 4 * 240 / ((*s).scrrect[2] * 3);
     }
-     
+
+    (*s).widthScale = (float)( ((*s).scrrect[2]) / ((*s).gameWidth) );
+    (*s).heightScale = (float)( ((*s).scrrect[3]) / ((*s).gameHeight) );
+}
+
+bool EventUpdate(System *s)
+{
+    (*s).esc = false;
+    /*
+    for(int i = 0; i < sizeof((*s).shortcutScripts); i++)
+    {
+        //i.activate? -> see how to do this in c++
+    }
+    */
+    glfwPollEvents();
+    //(*s).gameEnd = glfwTerminate(); ->figure how to close everything here
+    return (*s).gameEnd;
+}
+
+bool Await(System *s, int fps)
+{
+    if(!(*s).frameSkip)
+    {
+        //UnbindFB();-> Render the finished frame
+        glfwSwapBuffers((*s).window);
+        //BindFB();->Begin next frame
+    }
+    EventUpdate(s);
+}
+
+//Implement threading
+void RunMainThreadTask()
+{
+
 }
 
 int LoadChar()//Figure how the fuck you shoud declare this function
