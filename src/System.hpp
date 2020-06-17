@@ -19,7 +19,15 @@
 //TODO: implement a "channel" type
 //OBS:Fuck golang dude
 //OBS:Remember those functions with a System pointer in them? put them in the struct itself as declarations. see:https://www.murrayc.com/permalink/2017/06/28/a-c-developer-looks-at-go-the-programming-language-part-2-modularity-and-object-orientation/
-//
+
+
+
+//See the resources below for help:
+//https://www.programiz.com/cpp-programming/pointers
+//https://www.programiz.com/cpp-programming/structure-pointer
+//https://tour.golang.org/methods/6
+//https://tour.golang.org/methods/4
+//https://dev.to/dayvonjersen/c-for-go-programmers-part-1---struct-embedding-object-receivers-and-interfaces-in-c-27pf
 
 typedef int32_t team_mode;
 typedef std::map<std::string,int32_t> wincnt_map[];
@@ -218,9 +226,10 @@ struct System
     bool multiSamplingAntiAlliasing;//->MSAA
 
     //External shader variables
+    //Remember to change this, structs can only have ONE dinamic array
     std::string externalShaderList[];
     std::string externalShaderNames[];
-    std::string externalShaders[];//Remember to make this array dinamic
+    std::string externalShaders[];//Remember to make this a multidimensional array dinamic
 
     //Window icon
     //Image windowMainIcon[]
@@ -249,6 +258,9 @@ struct System
     std::string commonTag;
     float gameSpeed;
     Preloading preloading;
+
+    //System functions
+    
 }sys;
 
 struct OverrideCharData
@@ -539,6 +551,8 @@ bool Await(System *s, int fps)
     }
     EventUpdate(s);
 }
+
+
 
 //Implement threading
 void RunMainThreadTask()

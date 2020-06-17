@@ -31,46 +31,6 @@ endmacro()
 
 
 #################
-###  POCO
-#################
-set(CONAN_POCO_ROOT "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7")
-set(CONAN_INCLUDE_DIRS_POCO "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/include")
-set(CONAN_LIB_DIRS_POCO "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/lib")
-set(CONAN_BIN_DIRS_POCO )
-set(CONAN_RES_DIRS_POCO )
-set(CONAN_SRC_DIRS_POCO )
-set(CONAN_BUILD_DIRS_POCO "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/")
-set(CONAN_FRAMEWORK_DIRS_POCO )
-set(CONAN_LIBS_POCO PocoMongoDB PocoNetSSL PocoNet PocoCrypto PocoDataSQLite PocoData PocoZip PocoUtil PocoXML PocoJSON PocoRedis PocoFoundation pthread dl rt)
-set(CONAN_PKG_LIBS_POCO PocoMongoDB PocoNetSSL PocoNet PocoCrypto PocoDataSQLite PocoData PocoZip PocoUtil PocoXML PocoJSON PocoRedis PocoFoundation pthread dl rt)
-set(CONAN_SYSTEM_LIBS_POCO )
-set(CONAN_FRAMEWORKS_POCO )
-set(CONAN_FRAMEWORKS_FOUND_POCO "")  # Will be filled later
-set(CONAN_DEFINES_POCO "-DPOCO_STATIC=ON"
-			"-DPOCO_NO_AUTOMATIC_LIBS")
-set(CONAN_BUILD_MODULES_PATHS_POCO )
-# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
-set(CONAN_COMPILE_DEFINITIONS_POCO "POCO_STATIC=ON"
-			"POCO_NO_AUTOMATIC_LIBS")
-
-set(CONAN_C_FLAGS_POCO "")
-set(CONAN_CXX_FLAGS_POCO "")
-set(CONAN_SHARED_LINKER_FLAGS_POCO "")
-set(CONAN_EXE_LINKER_FLAGS_POCO "")
-
-# For modern cmake targets we use the list variables (separated with ;)
-set(CONAN_C_FLAGS_POCO_LIST "")
-set(CONAN_CXX_FLAGS_POCO_LIST "")
-set(CONAN_SHARED_LINKER_FLAGS_POCO_LIST "")
-set(CONAN_EXE_LINKER_FLAGS_POCO_LIST "")
-
-# Apple Frameworks
-conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_POCO "${CONAN_FRAMEWORKS_POCO}" "_POCO")
-# Append to aggregated values variable
-set(CONAN_LIBS_POCO ${CONAN_PKG_LIBS_POCO} ${CONAN_SYSTEM_LIBS_POCO} ${CONAN_FRAMEWORKS_FOUND_POCO})
-
-
-#################
 ###  GLFW
 #################
 set(CONAN_GLFW_ROOT "/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71")
@@ -380,41 +340,41 @@ set(CONAN_LIBS_OPENAL ${CONAN_PKG_LIBS_OPENAL} ${CONAN_SYSTEM_LIBS_OPENAL} ${CON
 
 
 #################
-###  OPENSSL
+###  NLOHMANN_JSON
 #################
-set(CONAN_OPENSSL_ROOT "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77")
-set(CONAN_INCLUDE_DIRS_OPENSSL "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/include")
-set(CONAN_LIB_DIRS_OPENSSL "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/lib")
-set(CONAN_BIN_DIRS_OPENSSL "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/bin")
-set(CONAN_RES_DIRS_OPENSSL "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/res")
-set(CONAN_SRC_DIRS_OPENSSL )
-set(CONAN_BUILD_DIRS_OPENSSL "/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/")
-set(CONAN_FRAMEWORK_DIRS_OPENSSL )
-set(CONAN_LIBS_OPENSSL ssl crypto)
-set(CONAN_PKG_LIBS_OPENSSL ssl crypto)
-set(CONAN_SYSTEM_LIBS_OPENSSL dl pthread)
-set(CONAN_FRAMEWORKS_OPENSSL )
-set(CONAN_FRAMEWORKS_FOUND_OPENSSL "")  # Will be filled later
-set(CONAN_DEFINES_OPENSSL )
-set(CONAN_BUILD_MODULES_PATHS_OPENSSL )
+set(CONAN_NLOHMANN_JSON_ROOT "/home/gustavotakeda/.conan/data/nlohmann_json/3.7.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9")
+set(CONAN_INCLUDE_DIRS_NLOHMANN_JSON "/home/gustavotakeda/.conan/data/nlohmann_json/3.7.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include")
+set(CONAN_LIB_DIRS_NLOHMANN_JSON )
+set(CONAN_BIN_DIRS_NLOHMANN_JSON )
+set(CONAN_RES_DIRS_NLOHMANN_JSON )
+set(CONAN_SRC_DIRS_NLOHMANN_JSON )
+set(CONAN_BUILD_DIRS_NLOHMANN_JSON "/home/gustavotakeda/.conan/data/nlohmann_json/3.7.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/")
+set(CONAN_FRAMEWORK_DIRS_NLOHMANN_JSON )
+set(CONAN_LIBS_NLOHMANN_JSON )
+set(CONAN_PKG_LIBS_NLOHMANN_JSON )
+set(CONAN_SYSTEM_LIBS_NLOHMANN_JSON )
+set(CONAN_FRAMEWORKS_NLOHMANN_JSON )
+set(CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON "")  # Will be filled later
+set(CONAN_DEFINES_NLOHMANN_JSON )
+set(CONAN_BUILD_MODULES_PATHS_NLOHMANN_JSON )
 # COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
-set(CONAN_COMPILE_DEFINITIONS_OPENSSL )
+set(CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON )
 
-set(CONAN_C_FLAGS_OPENSSL "")
-set(CONAN_CXX_FLAGS_OPENSSL "")
-set(CONAN_SHARED_LINKER_FLAGS_OPENSSL "")
-set(CONAN_EXE_LINKER_FLAGS_OPENSSL "")
+set(CONAN_C_FLAGS_NLOHMANN_JSON "")
+set(CONAN_CXX_FLAGS_NLOHMANN_JSON "")
+set(CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON "")
+set(CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON "")
 
 # For modern cmake targets we use the list variables (separated with ;)
-set(CONAN_C_FLAGS_OPENSSL_LIST "")
-set(CONAN_CXX_FLAGS_OPENSSL_LIST "")
-set(CONAN_SHARED_LINKER_FLAGS_OPENSSL_LIST "")
-set(CONAN_EXE_LINKER_FLAGS_OPENSSL_LIST "")
+set(CONAN_C_FLAGS_NLOHMANN_JSON_LIST "")
+set(CONAN_CXX_FLAGS_NLOHMANN_JSON_LIST "")
+set(CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_LIST "")
+set(CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_LIST "")
 
 # Apple Frameworks
-conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_OPENSSL "${CONAN_FRAMEWORKS_OPENSSL}" "_OPENSSL")
+conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON "${CONAN_FRAMEWORKS_NLOHMANN_JSON}" "_NLOHMANN_JSON")
 # Append to aggregated values variable
-set(CONAN_LIBS_OPENSSL ${CONAN_PKG_LIBS_OPENSSL} ${CONAN_SYSTEM_LIBS_OPENSSL} ${CONAN_FRAMEWORKS_FOUND_OPENSSL})
+set(CONAN_LIBS_NLOHMANN_JSON ${CONAN_PKG_LIBS_NLOHMANN_JSON} ${CONAN_SYSTEM_LIBS_NLOHMANN_JSON} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON})
 
 
 #################
@@ -649,44 +609,6 @@ set(CONAN_LIBS_LIBALSA ${CONAN_PKG_LIBS_LIBALSA} ${CONAN_SYSTEM_LIBS_LIBALSA} ${
 
 
 #################
-###  ZLIB
-#################
-set(CONAN_ZLIB_ROOT "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709")
-set(CONAN_INCLUDE_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/include")
-set(CONAN_LIB_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib")
-set(CONAN_BIN_DIRS_ZLIB )
-set(CONAN_RES_DIRS_ZLIB )
-set(CONAN_SRC_DIRS_ZLIB )
-set(CONAN_BUILD_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/")
-set(CONAN_FRAMEWORK_DIRS_ZLIB )
-set(CONAN_LIBS_ZLIB z)
-set(CONAN_PKG_LIBS_ZLIB z)
-set(CONAN_SYSTEM_LIBS_ZLIB )
-set(CONAN_FRAMEWORKS_ZLIB )
-set(CONAN_FRAMEWORKS_FOUND_ZLIB "")  # Will be filled later
-set(CONAN_DEFINES_ZLIB )
-set(CONAN_BUILD_MODULES_PATHS_ZLIB )
-# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
-set(CONAN_COMPILE_DEFINITIONS_ZLIB )
-
-set(CONAN_C_FLAGS_ZLIB "")
-set(CONAN_CXX_FLAGS_ZLIB "")
-set(CONAN_SHARED_LINKER_FLAGS_ZLIB "")
-set(CONAN_EXE_LINKER_FLAGS_ZLIB "")
-
-# For modern cmake targets we use the list variables (separated with ;)
-set(CONAN_C_FLAGS_ZLIB_LIST "")
-set(CONAN_CXX_FLAGS_ZLIB_LIST "")
-set(CONAN_SHARED_LINKER_FLAGS_ZLIB_LIST "")
-set(CONAN_EXE_LINKER_FLAGS_ZLIB_LIST "")
-
-# Apple Frameworks
-conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_ZLIB "${CONAN_FRAMEWORKS_ZLIB}" "_ZLIB")
-# Append to aggregated values variable
-set(CONAN_LIBS_ZLIB ${CONAN_PKG_LIBS_ZLIB} ${CONAN_SYSTEM_LIBS_ZLIB} ${CONAN_FRAMEWORKS_FOUND_ZLIB})
-
-
-#################
 ###  LIBXRANDR
 #################
 set(CONAN_LIBXRANDR_ROOT "/home/gustavotakeda/.conan/data/libxrandr/1.5.2/bincrafters/stable/package/6922337cb55d7d7d46f7a184b336a2eac1b7d81e")
@@ -723,6 +645,44 @@ set(CONAN_EXE_LINKER_FLAGS_LIBXRANDR_LIST "")
 conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_LIBXRANDR "${CONAN_FRAMEWORKS_LIBXRANDR}" "_LIBXRANDR")
 # Append to aggregated values variable
 set(CONAN_LIBS_LIBXRANDR ${CONAN_PKG_LIBS_LIBXRANDR} ${CONAN_SYSTEM_LIBS_LIBXRANDR} ${CONAN_FRAMEWORKS_FOUND_LIBXRANDR})
+
+
+#################
+###  ZLIB
+#################
+set(CONAN_ZLIB_ROOT "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709")
+set(CONAN_INCLUDE_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/include")
+set(CONAN_LIB_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib")
+set(CONAN_BIN_DIRS_ZLIB )
+set(CONAN_RES_DIRS_ZLIB )
+set(CONAN_SRC_DIRS_ZLIB )
+set(CONAN_BUILD_DIRS_ZLIB "/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/")
+set(CONAN_FRAMEWORK_DIRS_ZLIB )
+set(CONAN_LIBS_ZLIB z)
+set(CONAN_PKG_LIBS_ZLIB z)
+set(CONAN_SYSTEM_LIBS_ZLIB )
+set(CONAN_FRAMEWORKS_ZLIB )
+set(CONAN_FRAMEWORKS_FOUND_ZLIB "")  # Will be filled later
+set(CONAN_DEFINES_ZLIB )
+set(CONAN_BUILD_MODULES_PATHS_ZLIB )
+# COMPILE_DEFINITIONS are equal to CONAN_DEFINES without -D, for targets
+set(CONAN_COMPILE_DEFINITIONS_ZLIB )
+
+set(CONAN_C_FLAGS_ZLIB "")
+set(CONAN_CXX_FLAGS_ZLIB "")
+set(CONAN_SHARED_LINKER_FLAGS_ZLIB "")
+set(CONAN_EXE_LINKER_FLAGS_ZLIB "")
+
+# For modern cmake targets we use the list variables (separated with ;)
+set(CONAN_C_FLAGS_ZLIB_LIST "")
+set(CONAN_CXX_FLAGS_ZLIB_LIST "")
+set(CONAN_SHARED_LINKER_FLAGS_ZLIB_LIST "")
+set(CONAN_EXE_LINKER_FLAGS_ZLIB_LIST "")
+
+# Apple Frameworks
+conan_find_apple_frameworks(CONAN_FRAMEWORKS_FOUND_ZLIB "${CONAN_FRAMEWORKS_ZLIB}" "_ZLIB")
+# Append to aggregated values variable
+set(CONAN_LIBS_ZLIB ${CONAN_PKG_LIBS_ZLIB} ${CONAN_SYSTEM_LIBS_ZLIB} ${CONAN_FRAMEWORKS_FOUND_ZLIB})
 
 
 #################
@@ -1592,7 +1552,7 @@ set(CONAN_SETTINGS_COMPILER_LIBCXX "libstdc++11")
 set(CONAN_SETTINGS_COMPILER_VERSION "9")
 set(CONAN_SETTINGS_OS "Linux")
 
-set(CONAN_DEPENDENCIES poco glfw stb glad spdlog lua imgui glm openal openssl libxinerama libxcursor libxi mesa fmt libalsa zlib libxrandr expat libdrm libelf libunwind libxdamage libxshmfence libxxf86vm libxrender libxext libxfixes libpciaccess xz_utils libx11 xtrans libxcb xcb-proto util-macros libxau libpthread-stubs libxdmcp xorgproto xproto)
+set(CONAN_DEPENDENCIES glfw stb glad spdlog lua imgui glm openal nlohmann_json libxinerama libxcursor libxi mesa fmt libalsa libxrandr zlib expat libdrm libelf libunwind libxdamage libxshmfence libxxf86vm libxrender libxext libxfixes libpciaccess xz_utils libx11 xtrans libxcb xcb-proto util-macros libxau libpthread-stubs libxdmcp xorgproto xproto)
 # Storing original command line args (CMake helper) flags
 set(CONAN_CMD_CXX_FLAGS ${CONAN_CXX_FLAGS})
 
@@ -1600,8 +1560,7 @@ set(CONAN_CMD_SHARED_LINKER_FLAGS ${CONAN_SHARED_LINKER_FLAGS})
 set(CONAN_CMD_C_FLAGS ${CONAN_C_FLAGS})
 # Defining accumulated conan variables for all deps
 
-set(CONAN_INCLUDE_DIRS "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/include"
-			"/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/include"
+set(CONAN_INCLUDE_DIRS "/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/include"
 			"/home/gustavotakeda/.conan/data/stb/20200203/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
 			"/home/gustavotakeda/.conan/data/glad/0.1.33/_/_/package/18346ee21bbc8282fbdd084747fe37b49b6f1517/include"
 			"/home/gustavotakeda/.conan/data/spdlog/1.5.0/_/_/package/942d5c94aa934511ee4500bda27908cb4e791b24/include"
@@ -1610,15 +1569,15 @@ set(CONAN_INCLUDE_DIRS "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/
 			"/home/gustavotakeda/.conan/data/glm/0.9.9.7/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
 			"/home/gustavotakeda/.conan/data/openal/1.19.1/_/_/package/8f758c7d79f11e0791dfc187e19cd92dffabbd2b/include"
 			"/home/gustavotakeda/.conan/data/openal/1.19.1/_/_/package/8f758c7d79f11e0791dfc187e19cd92dffabbd2b/include/AL"
-			"/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/include"
+			"/home/gustavotakeda/.conan/data/nlohmann_json/3.7.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
 			"/home/gustavotakeda/.conan/data/libxinerama/1.1.4/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/include"
 			"/home/gustavotakeda/.conan/data/libxcursor/1.2.0/bincrafters/stable/package/a6b4e97b2b5ecb77554883039f4d0d14c8950e88/include"
 			"/home/gustavotakeda/.conan/data/libxi/1.7.10/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/include"
 			"/home/gustavotakeda/.conan/data/mesa/19.3.1/bincrafters/stable/package/f24568578ba519efbf2a4ff0314a15824f000a8e/include"
 			"/home/gustavotakeda/.conan/data/fmt/6.1.2/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/include"
 			"/home/gustavotakeda/.conan/data/libalsa/1.1.9/_/_/package/d48130e0dd76369b1338deb3b2372c5a649f9f2d/include"
-			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/include"
 			"/home/gustavotakeda/.conan/data/libxrandr/1.5.2/bincrafters/stable/package/6922337cb55d7d7d46f7a184b336a2eac1b7d81e/include"
+			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/include"
 			"/home/gustavotakeda/.conan/data/expat/2.2.9/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/include"
 			"/home/gustavotakeda/.conan/data/libdrm/2.4.100/bincrafters/stable/package/a8a34344807095d4931ed7df9e2246d990343dcd/include"
 			"/home/gustavotakeda/.conan/data/libdrm/2.4.100/bincrafters/stable/package/a8a34344807095d4931ed7df9e2246d990343dcd/include/libdrm"
@@ -1640,22 +1599,20 @@ set(CONAN_INCLUDE_DIRS "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/
 			"/home/gustavotakeda/.conan/data/libxdmcp/1.1.3/bincrafters/stable/package/1fd6dc2a17b4f28db4ca230c3f6252f07288d3d2/include"
 			"/home/gustavotakeda/.conan/data/xorgproto/2019.1/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include"
 			"/home/gustavotakeda/.conan/data/xproto/7.0.31/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/include" ${CONAN_INCLUDE_DIRS})
-set(CONAN_LIB_DIRS "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/lib"
-			"/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/lib"
+set(CONAN_LIB_DIRS "/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/lib"
 			"/home/gustavotakeda/.conan/data/glad/0.1.33/_/_/package/18346ee21bbc8282fbdd084747fe37b49b6f1517/lib"
 			"/home/gustavotakeda/.conan/data/spdlog/1.5.0/_/_/package/942d5c94aa934511ee4500bda27908cb4e791b24/lib"
 			"/home/gustavotakeda/.conan/data/lua/5.3.5/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib"
 			"/home/gustavotakeda/.conan/data/imgui/1.75/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/lib"
 			"/home/gustavotakeda/.conan/data/openal/1.19.1/_/_/package/8f758c7d79f11e0791dfc187e19cd92dffabbd2b/lib"
-			"/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/lib"
 			"/home/gustavotakeda/.conan/data/libxinerama/1.1.4/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/lib"
 			"/home/gustavotakeda/.conan/data/libxcursor/1.2.0/bincrafters/stable/package/a6b4e97b2b5ecb77554883039f4d0d14c8950e88/lib"
 			"/home/gustavotakeda/.conan/data/libxi/1.7.10/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/lib"
 			"/home/gustavotakeda/.conan/data/mesa/19.3.1/bincrafters/stable/package/f24568578ba519efbf2a4ff0314a15824f000a8e/lib"
 			"/home/gustavotakeda/.conan/data/fmt/6.1.2/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/lib"
 			"/home/gustavotakeda/.conan/data/libalsa/1.1.9/_/_/package/d48130e0dd76369b1338deb3b2372c5a649f9f2d/lib"
-			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib"
 			"/home/gustavotakeda/.conan/data/libxrandr/1.5.2/bincrafters/stable/package/6922337cb55d7d7d46f7a184b336a2eac1b7d81e/lib"
+			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib"
 			"/home/gustavotakeda/.conan/data/expat/2.2.9/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib"
 			"/home/gustavotakeda/.conan/data/libdrm/2.4.100/bincrafters/stable/package/a8a34344807095d4931ed7df9e2246d990343dcd/lib"
 			"/home/gustavotakeda/.conan/data/libelf/0.8.13/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/lib"
@@ -1676,15 +1633,13 @@ set(CONAN_LIB_DIRS "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9
 			"/home/gustavotakeda/.conan/data/libxdmcp/1.1.3/bincrafters/stable/package/1fd6dc2a17b4f28db4ca230c3f6252f07288d3d2/lib"
 			"/home/gustavotakeda/.conan/data/xproto/7.0.31/bincrafters/stable/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/lib" ${CONAN_LIB_DIRS})
 set(CONAN_BIN_DIRS "/home/gustavotakeda/.conan/data/imgui/1.75/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/bin"
-			"/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/bin"
 			"/home/gustavotakeda/.conan/data/libalsa/1.1.9/_/_/package/d48130e0dd76369b1338deb3b2372c5a649f9f2d/bin"
 			"/home/gustavotakeda/.conan/data/expat/2.2.9/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/bin"
 			"/home/gustavotakeda/.conan/data/xz_utils/5.2.4/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/bin" ${CONAN_BIN_DIRS})
-set(CONAN_RES_DIRS "/home/gustavotakeda/.conan/data/imgui/1.75/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/res"
-			"/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/res" ${CONAN_RES_DIRS})
+set(CONAN_RES_DIRS "/home/gustavotakeda/.conan/data/imgui/1.75/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/res" ${CONAN_RES_DIRS})
 set(CONAN_FRAMEWORK_DIRS  ${CONAN_FRAMEWORK_DIRS})
-set(CONAN_LIBS PocoMongoDB PocoNetSSL PocoNet PocoCrypto PocoDataSQLite PocoData PocoZip PocoUtil PocoXML PocoJSON PocoRedis PocoFoundation pthread dl rt glfw3 glad spdlog lua imgui openal ssl crypto Xinerama Xcursor Xi EGL GL gbm glapi vulkan_intel fmt asound z Xrandr expat drm drm_amdgpu drm_freedreno drm_intel drm_nouveau drm_radeon kms elf unwind unwind-coredump unwind-generic unwind-ptrace unwind-setjmp unwind-x86_64 Xdamage xshmfence Xxf86vm Xrender Xext Xfixes pciaccess lzma X11 xcb Xau Xdmcp ${CONAN_LIBS})
-set(CONAN_PKG_LIBS PocoMongoDB PocoNetSSL PocoNet PocoCrypto PocoDataSQLite PocoData PocoZip PocoUtil PocoXML PocoJSON PocoRedis PocoFoundation pthread dl rt glfw3 glad spdlog lua imgui openal ssl crypto Xinerama Xcursor Xi EGL GL gbm glapi vulkan_intel fmt asound z Xrandr expat drm drm_amdgpu drm_freedreno drm_intel drm_nouveau drm_radeon kms elf unwind unwind-coredump unwind-generic unwind-ptrace unwind-setjmp unwind-x86_64 Xdamage xshmfence Xxf86vm Xrender Xext Xfixes pciaccess lzma X11 xcb Xau Xdmcp ${CONAN_PKG_LIBS})
+set(CONAN_LIBS glfw3 glad spdlog lua imgui openal Xinerama Xcursor Xi EGL GL gbm glapi vulkan_intel fmt asound Xrandr z expat drm drm_amdgpu drm_freedreno drm_intel drm_nouveau drm_radeon kms elf unwind unwind-coredump unwind-generic unwind-ptrace unwind-setjmp unwind-x86_64 Xdamage xshmfence Xxf86vm Xrender Xext Xfixes pciaccess lzma X11 xcb Xau Xdmcp ${CONAN_LIBS})
+set(CONAN_PKG_LIBS glfw3 glad spdlog lua imgui openal Xinerama Xcursor Xi EGL GL gbm glapi vulkan_intel fmt asound Xrandr z expat drm drm_amdgpu drm_freedreno drm_intel drm_nouveau drm_radeon kms elf unwind unwind-coredump unwind-generic unwind-ptrace unwind-setjmp unwind-x86_64 Xdamage xshmfence Xxf86vm Xrender Xext Xfixes pciaccess lzma X11 xcb Xau Xdmcp ${CONAN_PKG_LIBS})
 set(CONAN_SYSTEM_LIBS m rt pthread dl ${CONAN_SYSTEM_LIBS})
 set(CONAN_FRAMEWORKS  ${CONAN_FRAMEWORKS})
 set(CONAN_FRAMEWORKS_FOUND "")  # Will be filled later
@@ -1695,12 +1650,9 @@ set(CONAN_DEFINES "-DLZMA_API_STATIC"
 			"-DLUA_USE_POSIX"
 			"-DSPDLOG_COMPILED_LIB"
 			"-DSPDLOG_FMT_EXTERNAL"
-			"-DSTB_TEXTEDIT_KEYTYPE=unsigned"
-			"-DPOCO_STATIC=ON"
-			"-DPOCO_NO_AUTOMATIC_LIBS" ${CONAN_DEFINES})
+			"-DSTB_TEXTEDIT_KEYTYPE=unsigned" ${CONAN_DEFINES})
 set(CONAN_BUILD_MODULES_PATHS  ${CONAN_BUILD_MODULES_PATHS})
-set(CONAN_CMAKE_MODULE_PATH "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/package/efb9fda5c70247aa8bb81b6e7550af61d5a9dfc7/"
-			"/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/"
+set(CONAN_CMAKE_MODULE_PATH "/home/gustavotakeda/.conan/data/glfw/3.3.2/bincrafters/stable/package/e2a6e2cdb6da595e1db20b4285acc6fde97fcf71/"
 			"/home/gustavotakeda/.conan/data/stb/20200203/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
 			"/home/gustavotakeda/.conan/data/glad/0.1.33/_/_/package/18346ee21bbc8282fbdd084747fe37b49b6f1517/"
 			"/home/gustavotakeda/.conan/data/spdlog/1.5.0/_/_/package/942d5c94aa934511ee4500bda27908cb4e791b24/"
@@ -1708,7 +1660,7 @@ set(CONAN_CMAKE_MODULE_PATH "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/pac
 			"/home/gustavotakeda/.conan/data/imgui/1.75/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/"
 			"/home/gustavotakeda/.conan/data/glm/0.9.9.7/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
 			"/home/gustavotakeda/.conan/data/openal/1.19.1/_/_/package/8f758c7d79f11e0791dfc187e19cd92dffabbd2b/"
-			"/home/gustavotakeda/.conan/data/openssl/1.0.2t/_/_/package/f99afdbf2a1cc98ba2029817b35103455b6a9b77/"
+			"/home/gustavotakeda/.conan/data/nlohmann_json/3.7.3/_/_/package/5ab84d6acfe1f23c4fae0ab88f26e3a396351ac9/"
 			"/home/gustavotakeda/.conan/data/libxinerama/1.1.4/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/"
 			"/home/gustavotakeda/.conan/data/libxinerama/1.1.4/bincrafters/stable/package/f1e175c641f9a0b831ec5f72573e0f3afcfc88aa/lib/pkgconfig"
 			"/home/gustavotakeda/.conan/data/libxcursor/1.2.0/bincrafters/stable/package/a6b4e97b2b5ecb77554883039f4d0d14c8950e88/"
@@ -1718,9 +1670,9 @@ set(CONAN_CMAKE_MODULE_PATH "/home/gustavotakeda/.conan/data/poco/1.10.1/_/_/pac
 			"/home/gustavotakeda/.conan/data/mesa/19.3.1/bincrafters/stable/package/f24568578ba519efbf2a4ff0314a15824f000a8e/"
 			"/home/gustavotakeda/.conan/data/fmt/6.1.2/_/_/package/b911f48570f9bb2902d9e83b2b9ebf9d376c8c56/"
 			"/home/gustavotakeda/.conan/data/libalsa/1.1.9/_/_/package/d48130e0dd76369b1338deb3b2372c5a649f9f2d/"
-			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/"
 			"/home/gustavotakeda/.conan/data/libxrandr/1.5.2/bincrafters/stable/package/6922337cb55d7d7d46f7a184b336a2eac1b7d81e/"
 			"/home/gustavotakeda/.conan/data/libxrandr/1.5.2/bincrafters/stable/package/6922337cb55d7d7d46f7a184b336a2eac1b7d81e/lib/pkgconfig"
+			"/home/gustavotakeda/.conan/data/zlib/1.2.11/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/"
 			"/home/gustavotakeda/.conan/data/expat/2.2.9/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/"
 			"/home/gustavotakeda/.conan/data/libdrm/2.4.100/bincrafters/stable/package/a8a34344807095d4931ed7df9e2246d990343dcd/"
 			"/home/gustavotakeda/.conan/data/libelf/0.8.13/_/_/package/6af9cc7cb931c5ad942174fd7838eb655717c709/"
@@ -1781,57 +1733,6 @@ macro(conan_define_targets)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${CONAN_CMD_CXX_FLAGS}")
     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${CONAN_CMD_C_FLAGS}")
     set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} ${CONAN_CMD_SHARED_LINKER_FLAGS}")
-
-
-    set(_CONAN_PKG_LIBS_POCO_DEPENDENCIES "${CONAN_SYSTEM_LIBS_POCO} ${CONAN_FRAMEWORKS_FOUND_POCO} CONAN_PKG::openssl")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_POCO_DEPENDENCIES "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_POCO}" "${CONAN_LIB_DIRS_POCO}"
-                                  CONAN_PACKAGE_TARGETS_POCO "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES}"
-                                  "" poco)
-    set(_CONAN_PKG_LIBS_POCO_DEPENDENCIES_DEBUG "${CONAN_SYSTEM_LIBS_POCO_DEBUG} ${CONAN_FRAMEWORKS_FOUND_POCO_DEBUG} CONAN_PKG::openssl")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_POCO_DEPENDENCIES_DEBUG "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_DEBUG}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_POCO_DEBUG}" "${CONAN_LIB_DIRS_POCO_DEBUG}"
-                                  CONAN_PACKAGE_TARGETS_POCO_DEBUG "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_DEBUG}"
-                                  "debug" poco)
-    set(_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELEASE "${CONAN_SYSTEM_LIBS_POCO_RELEASE} ${CONAN_FRAMEWORKS_FOUND_POCO_RELEASE} CONAN_PKG::openssl")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELEASE "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELEASE}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_POCO_RELEASE}" "${CONAN_LIB_DIRS_POCO_RELEASE}"
-                                  CONAN_PACKAGE_TARGETS_POCO_RELEASE "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELEASE}"
-                                  "release" poco)
-    set(_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELWITHDEBINFO "${CONAN_SYSTEM_LIBS_POCO_RELWITHDEBINFO} ${CONAN_FRAMEWORKS_FOUND_POCO_RELWITHDEBINFO} CONAN_PKG::openssl")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELWITHDEBINFO "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELWITHDEBINFO}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_POCO_RELWITHDEBINFO}" "${CONAN_LIB_DIRS_POCO_RELWITHDEBINFO}"
-                                  CONAN_PACKAGE_TARGETS_POCO_RELWITHDEBINFO "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELWITHDEBINFO}"
-                                  "relwithdebinfo" poco)
-    set(_CONAN_PKG_LIBS_POCO_DEPENDENCIES_MINSIZEREL "${CONAN_SYSTEM_LIBS_POCO_MINSIZEREL} ${CONAN_FRAMEWORKS_FOUND_POCO_MINSIZEREL} CONAN_PKG::openssl")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_POCO_DEPENDENCIES_MINSIZEREL "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_MINSIZEREL}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_POCO_MINSIZEREL}" "${CONAN_LIB_DIRS_POCO_MINSIZEREL}"
-                                  CONAN_PACKAGE_TARGETS_POCO_MINSIZEREL "${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_MINSIZEREL}"
-                                  "minsizerel" poco)
-
-    add_library(CONAN_PKG::poco INTERFACE IMPORTED)
-
-    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
-    set_property(TARGET CONAN_PKG::poco PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_POCO} ${_CONAN_PKG_LIBS_POCO_DEPENDENCIES} ${CONAN_SHARED_LINKER_FLAGS_POCO_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_LIST}
-                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_POCO_RELEASE} ${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_POCO_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_RELEASE_LIST}>
-                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_POCO_RELWITHDEBINFO} ${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_RELWITHDEBINFO} ${CONAN_SHARED_LINKER_FLAGS_POCO_RELWITHDEBINFO_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_RELWITHDEBINFO_LIST}>
-                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_POCO_MINSIZEREL} ${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_MINSIZEREL} ${CONAN_SHARED_LINKER_FLAGS_POCO_MINSIZEREL_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_MINSIZEREL_LIST}>
-                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_POCO_DEBUG} ${_CONAN_PKG_LIBS_POCO_DEPENDENCIES_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_POCO_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_POCO_DEBUG_LIST}>)
-    set_property(TARGET CONAN_PKG::poco PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_POCO}
-                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_POCO_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_POCO_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_POCO_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_POCO_DEBUG}>)
-    set_property(TARGET CONAN_PKG::poco PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_POCO}
-                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_POCO_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_POCO_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_POCO_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_POCO_DEBUG}>)
-    set_property(TARGET CONAN_PKG::poco PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_POCO_LIST} ${CONAN_CXX_FLAGS_POCO_LIST}
-                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_POCO_RELEASE_LIST} ${CONAN_CXX_FLAGS_POCO_RELEASE_LIST}>
-                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_POCO_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_POCO_RELWITHDEBINFO_LIST}>
-                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_POCO_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_POCO_MINSIZEREL_LIST}>
-                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_POCO_DEBUG_LIST}  ${CONAN_CXX_FLAGS_POCO_DEBUG_LIST}>)
 
 
     set(_CONAN_PKG_LIBS_GLFW_DEPENDENCIES "${CONAN_SYSTEM_LIBS_GLFW} ${CONAN_FRAMEWORKS_FOUND_GLFW} CONAN_PKG::libx11 CONAN_PKG::libxrandr CONAN_PKG::libxinerama CONAN_PKG::libxcursor CONAN_PKG::libxi CONAN_PKG::mesa")
@@ -2242,55 +2143,55 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_OPENAL_DEBUG_LIST}  ${CONAN_CXX_FLAGS_OPENAL_DEBUG_LIST}>)
 
 
-    set(_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES "${CONAN_SYSTEM_LIBS_OPENSSL} ${CONAN_FRAMEWORKS_FOUND_OPENSSL} CONAN_PKG::zlib")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_OPENSSL}" "${CONAN_LIB_DIRS_OPENSSL}"
-                                  CONAN_PACKAGE_TARGETS_OPENSSL "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES}"
-                                  "" openssl)
-    set(_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_DEBUG "${CONAN_SYSTEM_LIBS_OPENSSL_DEBUG} ${CONAN_FRAMEWORKS_FOUND_OPENSSL_DEBUG} CONAN_PKG::zlib")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_DEBUG "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_DEBUG}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_OPENSSL_DEBUG}" "${CONAN_LIB_DIRS_OPENSSL_DEBUG}"
-                                  CONAN_PACKAGE_TARGETS_OPENSSL_DEBUG "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_DEBUG}"
-                                  "debug" openssl)
-    set(_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELEASE "${CONAN_SYSTEM_LIBS_OPENSSL_RELEASE} ${CONAN_FRAMEWORKS_FOUND_OPENSSL_RELEASE} CONAN_PKG::zlib")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELEASE "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELEASE}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_OPENSSL_RELEASE}" "${CONAN_LIB_DIRS_OPENSSL_RELEASE}"
-                                  CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELEASE}"
-                                  "release" openssl)
-    set(_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELWITHDEBINFO "${CONAN_SYSTEM_LIBS_OPENSSL_RELWITHDEBINFO} ${CONAN_FRAMEWORKS_FOUND_OPENSSL_RELWITHDEBINFO} CONAN_PKG::zlib")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELWITHDEBINFO "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELWITHDEBINFO}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_OPENSSL_RELWITHDEBINFO}" "${CONAN_LIB_DIRS_OPENSSL_RELWITHDEBINFO}"
-                                  CONAN_PACKAGE_TARGETS_OPENSSL_RELWITHDEBINFO "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELWITHDEBINFO}"
-                                  "relwithdebinfo" openssl)
-    set(_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_MINSIZEREL "${CONAN_SYSTEM_LIBS_OPENSSL_MINSIZEREL} ${CONAN_FRAMEWORKS_FOUND_OPENSSL_MINSIZEREL} CONAN_PKG::zlib")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_MINSIZEREL "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_MINSIZEREL}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_OPENSSL_MINSIZEREL}" "${CONAN_LIB_DIRS_OPENSSL_MINSIZEREL}"
-                                  CONAN_PACKAGE_TARGETS_OPENSSL_MINSIZEREL "${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_MINSIZEREL}"
-                                  "minsizerel" openssl)
+    set(_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES "${CONAN_SYSTEM_LIBS_NLOHMANN_JSON} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_NLOHMANN_JSON}" "${CONAN_LIB_DIRS_NLOHMANN_JSON}"
+                                  CONAN_PACKAGE_TARGETS_NLOHMANN_JSON "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES}"
+                                  "" nlohmann_json)
+    set(_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_DEBUG "${CONAN_SYSTEM_LIBS_NLOHMANN_JSON_DEBUG} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON_DEBUG} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_DEBUG "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_DEBUG}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_NLOHMANN_JSON_DEBUG}" "${CONAN_LIB_DIRS_NLOHMANN_JSON_DEBUG}"
+                                  CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_DEBUG "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_DEBUG}"
+                                  "debug" nlohmann_json)
+    set(_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELEASE "${CONAN_SYSTEM_LIBS_NLOHMANN_JSON_RELEASE} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON_RELEASE} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELEASE "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELEASE}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_NLOHMANN_JSON_RELEASE}" "${CONAN_LIB_DIRS_NLOHMANN_JSON_RELEASE}"
+                                  CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_RELEASE "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELEASE}"
+                                  "release" nlohmann_json)
+    set(_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELWITHDEBINFO "${CONAN_SYSTEM_LIBS_NLOHMANN_JSON_RELWITHDEBINFO} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON_RELWITHDEBINFO} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELWITHDEBINFO "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELWITHDEBINFO}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_NLOHMANN_JSON_RELWITHDEBINFO}" "${CONAN_LIB_DIRS_NLOHMANN_JSON_RELWITHDEBINFO}"
+                                  CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_RELWITHDEBINFO "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELWITHDEBINFO}"
+                                  "relwithdebinfo" nlohmann_json)
+    set(_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_MINSIZEREL "${CONAN_SYSTEM_LIBS_NLOHMANN_JSON_MINSIZEREL} ${CONAN_FRAMEWORKS_FOUND_NLOHMANN_JSON_MINSIZEREL} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_MINSIZEREL "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_MINSIZEREL}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_NLOHMANN_JSON_MINSIZEREL}" "${CONAN_LIB_DIRS_NLOHMANN_JSON_MINSIZEREL}"
+                                  CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_MINSIZEREL "${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_MINSIZEREL}"
+                                  "minsizerel" nlohmann_json)
 
-    add_library(CONAN_PKG::openssl INTERFACE IMPORTED)
+    add_library(CONAN_PKG::nlohmann_json INTERFACE IMPORTED)
 
     # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
-    set_property(TARGET CONAN_PKG::openssl PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_OPENSSL} ${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_LIST}
-                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_OPENSSL_RELEASE} ${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_RELEASE_LIST}>
-                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_OPENSSL_RELWITHDEBINFO} ${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_RELWITHDEBINFO} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_RELWITHDEBINFO_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_RELWITHDEBINFO_LIST}>
-                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_OPENSSL_MINSIZEREL} ${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_MINSIZEREL} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_MINSIZEREL_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_MINSIZEREL_LIST}>
-                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_OPENSSL_DEBUG} ${_CONAN_PKG_LIBS_OPENSSL_DEPENDENCIES_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_OPENSSL_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_OPENSSL_DEBUG_LIST}>)
-    set_property(TARGET CONAN_PKG::openssl PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_OPENSSL}
-                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_OPENSSL_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_OPENSSL_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_OPENSSL_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_OPENSSL_DEBUG}>)
-    set_property(TARGET CONAN_PKG::openssl PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_OPENSSL}
-                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_OPENSSL_DEBUG}>)
-    set_property(TARGET CONAN_PKG::openssl PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_OPENSSL_LIST} ${CONAN_CXX_FLAGS_OPENSSL_LIST}
-                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_OPENSSL_RELEASE_LIST} ${CONAN_CXX_FLAGS_OPENSSL_RELEASE_LIST}>
-                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_OPENSSL_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_OPENSSL_RELWITHDEBINFO_LIST}>
-                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_OPENSSL_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_OPENSSL_MINSIZEREL_LIST}>
-                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_OPENSSL_DEBUG_LIST}  ${CONAN_CXX_FLAGS_OPENSSL_DEBUG_LIST}>)
+    set_property(TARGET CONAN_PKG::nlohmann_json PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_NLOHMANN_JSON} ${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES} ${CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_LIST} ${CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_LIST}
+                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_RELEASE} ${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_RELEASE_LIST}>
+                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_RELWITHDEBINFO} ${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_RELWITHDEBINFO} ${CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_RELWITHDEBINFO_LIST} ${CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_RELWITHDEBINFO_LIST}>
+                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_MINSIZEREL} ${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_MINSIZEREL} ${CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_MINSIZEREL_LIST} ${CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_MINSIZEREL_LIST}>
+                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_NLOHMANN_JSON_DEBUG} ${_CONAN_PKG_LIBS_NLOHMANN_JSON_DEPENDENCIES_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_NLOHMANN_JSON_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_NLOHMANN_JSON_DEBUG_LIST}>)
+    set_property(TARGET CONAN_PKG::nlohmann_json PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_NLOHMANN_JSON}
+                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_NLOHMANN_JSON_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_NLOHMANN_JSON_RELWITHDEBINFO}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_NLOHMANN_JSON_MINSIZEREL}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_NLOHMANN_JSON_DEBUG}>)
+    set_property(TARGET CONAN_PKG::nlohmann_json PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON}
+                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON_RELWITHDEBINFO}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON_MINSIZEREL}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_NLOHMANN_JSON_DEBUG}>)
+    set_property(TARGET CONAN_PKG::nlohmann_json PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_NLOHMANN_JSON_LIST} ${CONAN_CXX_FLAGS_NLOHMANN_JSON_LIST}
+                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_NLOHMANN_JSON_RELEASE_LIST} ${CONAN_CXX_FLAGS_NLOHMANN_JSON_RELEASE_LIST}>
+                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_NLOHMANN_JSON_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_NLOHMANN_JSON_RELWITHDEBINFO_LIST}>
+                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_NLOHMANN_JSON_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_NLOHMANN_JSON_MINSIZEREL_LIST}>
+                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_NLOHMANN_JSON_DEBUG_LIST}  ${CONAN_CXX_FLAGS_NLOHMANN_JSON_DEBUG_LIST}>)
 
 
     set(_CONAN_PKG_LIBS_LIBXINERAMA_DEPENDENCIES "${CONAN_SYSTEM_LIBS_LIBXINERAMA} ${CONAN_FRAMEWORKS_FOUND_LIBXINERAMA} CONAN_PKG::libxext CONAN_PKG::libxfixes")
@@ -2599,57 +2500,6 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_LIBALSA_DEBUG_LIST}  ${CONAN_CXX_FLAGS_LIBALSA_DEBUG_LIST}>)
 
 
-    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES "${CONAN_SYSTEM_LIBS_ZLIB} ${CONAN_FRAMEWORKS_FOUND_ZLIB} ")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB}" "${CONAN_LIB_DIRS_ZLIB}"
-                                  CONAN_PACKAGE_TARGETS_ZLIB "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES}"
-                                  "" zlib)
-    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG "${CONAN_SYSTEM_LIBS_ZLIB_DEBUG} ${CONAN_FRAMEWORKS_FOUND_ZLIB_DEBUG} ")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_DEBUG}" "${CONAN_LIB_DIRS_ZLIB_DEBUG}"
-                                  CONAN_PACKAGE_TARGETS_ZLIB_DEBUG "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG}"
-                                  "debug" zlib)
-    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE "${CONAN_SYSTEM_LIBS_ZLIB_RELEASE} ${CONAN_FRAMEWORKS_FOUND_ZLIB_RELEASE} ")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_RELEASE}" "${CONAN_LIB_DIRS_ZLIB_RELEASE}"
-                                  CONAN_PACKAGE_TARGETS_ZLIB_RELEASE "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE}"
-                                  "release" zlib)
-    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO "${CONAN_SYSTEM_LIBS_ZLIB_RELWITHDEBINFO} ${CONAN_FRAMEWORKS_FOUND_ZLIB_RELWITHDEBINFO} ")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_RELWITHDEBINFO}" "${CONAN_LIB_DIRS_ZLIB_RELWITHDEBINFO}"
-                                  CONAN_PACKAGE_TARGETS_ZLIB_RELWITHDEBINFO "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO}"
-                                  "relwithdebinfo" zlib)
-    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL "${CONAN_SYSTEM_LIBS_ZLIB_MINSIZEREL} ${CONAN_FRAMEWORKS_FOUND_ZLIB_MINSIZEREL} ")
-    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL}")
-    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_MINSIZEREL}" "${CONAN_LIB_DIRS_ZLIB_MINSIZEREL}"
-                                  CONAN_PACKAGE_TARGETS_ZLIB_MINSIZEREL "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL}"
-                                  "minsizerel" zlib)
-
-    add_library(CONAN_PKG::zlib INTERFACE IMPORTED)
-
-    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
-    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_ZLIB} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_LIST}
-                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_ZLIB_RELEASE} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_RELEASE_LIST}>
-                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_ZLIB_RELWITHDEBINFO} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_RELWITHDEBINFO_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_RELWITHDEBINFO_LIST}>
-                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_ZLIB_MINSIZEREL} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_MINSIZEREL_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_MINSIZEREL_LIST}>
-                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_ZLIB_DEBUG} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_DEBUG_LIST}>)
-    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_ZLIB}
-                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_ZLIB_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_ZLIB_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_ZLIB_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_ZLIB_DEBUG}>)
-    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_ZLIB}
-                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_ZLIB_RELEASE}>
-                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_ZLIB_RELWITHDEBINFO}>
-                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_ZLIB_MINSIZEREL}>
-                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_ZLIB_DEBUG}>)
-    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_ZLIB_LIST} ${CONAN_CXX_FLAGS_ZLIB_LIST}
-                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELEASE_LIST}>
-                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_ZLIB_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELWITHDEBINFO_LIST}>
-                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_ZLIB_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_ZLIB_MINSIZEREL_LIST}>
-                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_ZLIB_DEBUG_LIST}  ${CONAN_CXX_FLAGS_ZLIB_DEBUG_LIST}>)
-
-
     set(_CONAN_PKG_LIBS_LIBXRANDR_DEPENDENCIES "${CONAN_SYSTEM_LIBS_LIBXRANDR} ${CONAN_FRAMEWORKS_FOUND_LIBXRANDR} CONAN_PKG::libxrender CONAN_PKG::libxext")
     string(REPLACE " " ";" _CONAN_PKG_LIBS_LIBXRANDR_DEPENDENCIES "${_CONAN_PKG_LIBS_LIBXRANDR_DEPENDENCIES}")
     conan_package_library_targets("${CONAN_PKG_LIBS_LIBXRANDR}" "${CONAN_LIB_DIRS_LIBXRANDR}"
@@ -2699,6 +2549,57 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_LIBXRANDR_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_LIBXRANDR_RELWITHDEBINFO_LIST}>
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_LIBXRANDR_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_LIBXRANDR_MINSIZEREL_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_LIBXRANDR_DEBUG_LIST}  ${CONAN_CXX_FLAGS_LIBXRANDR_DEBUG_LIST}>)
+
+
+    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES "${CONAN_SYSTEM_LIBS_ZLIB} ${CONAN_FRAMEWORKS_FOUND_ZLIB} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB}" "${CONAN_LIB_DIRS_ZLIB}"
+                                  CONAN_PACKAGE_TARGETS_ZLIB "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES}"
+                                  "" zlib)
+    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG "${CONAN_SYSTEM_LIBS_ZLIB_DEBUG} ${CONAN_FRAMEWORKS_FOUND_ZLIB_DEBUG} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_DEBUG}" "${CONAN_LIB_DIRS_ZLIB_DEBUG}"
+                                  CONAN_PACKAGE_TARGETS_ZLIB_DEBUG "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG}"
+                                  "debug" zlib)
+    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE "${CONAN_SYSTEM_LIBS_ZLIB_RELEASE} ${CONAN_FRAMEWORKS_FOUND_ZLIB_RELEASE} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_RELEASE}" "${CONAN_LIB_DIRS_ZLIB_RELEASE}"
+                                  CONAN_PACKAGE_TARGETS_ZLIB_RELEASE "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE}"
+                                  "release" zlib)
+    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO "${CONAN_SYSTEM_LIBS_ZLIB_RELWITHDEBINFO} ${CONAN_FRAMEWORKS_FOUND_ZLIB_RELWITHDEBINFO} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_RELWITHDEBINFO}" "${CONAN_LIB_DIRS_ZLIB_RELWITHDEBINFO}"
+                                  CONAN_PACKAGE_TARGETS_ZLIB_RELWITHDEBINFO "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO}"
+                                  "relwithdebinfo" zlib)
+    set(_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL "${CONAN_SYSTEM_LIBS_ZLIB_MINSIZEREL} ${CONAN_FRAMEWORKS_FOUND_ZLIB_MINSIZEREL} ")
+    string(REPLACE " " ";" _CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL}")
+    conan_package_library_targets("${CONAN_PKG_LIBS_ZLIB_MINSIZEREL}" "${CONAN_LIB_DIRS_ZLIB_MINSIZEREL}"
+                                  CONAN_PACKAGE_TARGETS_ZLIB_MINSIZEREL "${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL}"
+                                  "minsizerel" zlib)
+
+    add_library(CONAN_PKG::zlib INTERFACE IMPORTED)
+
+    # Property INTERFACE_LINK_FLAGS do not work, necessary to add to INTERFACE_LINK_LIBRARIES
+    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_LINK_LIBRARIES ${CONAN_PACKAGE_TARGETS_ZLIB} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_LIST}
+                                                                 $<$<CONFIG:Release>:${CONAN_PACKAGE_TARGETS_ZLIB_RELEASE} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELEASE} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_RELEASE_LIST}>
+                                                                 $<$<CONFIG:RelWithDebInfo>:${CONAN_PACKAGE_TARGETS_ZLIB_RELWITHDEBINFO} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_RELWITHDEBINFO} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_RELWITHDEBINFO_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_RELWITHDEBINFO_LIST}>
+                                                                 $<$<CONFIG:MinSizeRel>:${CONAN_PACKAGE_TARGETS_ZLIB_MINSIZEREL} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_MINSIZEREL} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_MINSIZEREL_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_MINSIZEREL_LIST}>
+                                                                 $<$<CONFIG:Debug>:${CONAN_PACKAGE_TARGETS_ZLIB_DEBUG} ${_CONAN_PKG_LIBS_ZLIB_DEPENDENCIES_DEBUG} ${CONAN_SHARED_LINKER_FLAGS_ZLIB_DEBUG_LIST} ${CONAN_EXE_LINKER_FLAGS_ZLIB_DEBUG_LIST}>)
+    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_INCLUDE_DIRECTORIES ${CONAN_INCLUDE_DIRS_ZLIB}
+                                                                      $<$<CONFIG:Release>:${CONAN_INCLUDE_DIRS_ZLIB_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_INCLUDE_DIRS_ZLIB_RELWITHDEBINFO}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_INCLUDE_DIRS_ZLIB_MINSIZEREL}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_INCLUDE_DIRS_ZLIB_DEBUG}>)
+    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_COMPILE_DEFINITIONS ${CONAN_COMPILE_DEFINITIONS_ZLIB}
+                                                                      $<$<CONFIG:Release>:${CONAN_COMPILE_DEFINITIONS_ZLIB_RELEASE}>
+                                                                      $<$<CONFIG:RelWithDebInfo>:${CONAN_COMPILE_DEFINITIONS_ZLIB_RELWITHDEBINFO}>
+                                                                      $<$<CONFIG:MinSizeRel>:${CONAN_COMPILE_DEFINITIONS_ZLIB_MINSIZEREL}>
+                                                                      $<$<CONFIG:Debug>:${CONAN_COMPILE_DEFINITIONS_ZLIB_DEBUG}>)
+    set_property(TARGET CONAN_PKG::zlib PROPERTY INTERFACE_COMPILE_OPTIONS ${CONAN_C_FLAGS_ZLIB_LIST} ${CONAN_CXX_FLAGS_ZLIB_LIST}
+                                                                  $<$<CONFIG:Release>:${CONAN_C_FLAGS_ZLIB_RELEASE_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELEASE_LIST}>
+                                                                  $<$<CONFIG:RelWithDebInfo>:${CONAN_C_FLAGS_ZLIB_RELWITHDEBINFO_LIST} ${CONAN_CXX_FLAGS_ZLIB_RELWITHDEBINFO_LIST}>
+                                                                  $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_ZLIB_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_ZLIB_MINSIZEREL_LIST}>
+                                                                  $<$<CONFIG:Debug>:${CONAN_C_FLAGS_ZLIB_DEBUG_LIST}  ${CONAN_CXX_FLAGS_ZLIB_DEBUG_LIST}>)
 
 
     set(_CONAN_PKG_LIBS_EXPAT_DEPENDENCIES "${CONAN_SYSTEM_LIBS_EXPAT} ${CONAN_FRAMEWORKS_FOUND_EXPAT} ")
@@ -3822,7 +3723,7 @@ macro(conan_define_targets)
                                                                   $<$<CONFIG:MinSizeRel>:${CONAN_C_FLAGS_XPROTO_MINSIZEREL_LIST} ${CONAN_CXX_FLAGS_XPROTO_MINSIZEREL_LIST}>
                                                                   $<$<CONFIG:Debug>:${CONAN_C_FLAGS_XPROTO_DEBUG_LIST}  ${CONAN_CXX_FLAGS_XPROTO_DEBUG_LIST}>)
 
-    set(CONAN_TARGETS CONAN_PKG::poco CONAN_PKG::glfw CONAN_PKG::stb CONAN_PKG::glad CONAN_PKG::spdlog CONAN_PKG::lua CONAN_PKG::imgui CONAN_PKG::glm CONAN_PKG::openal CONAN_PKG::openssl CONAN_PKG::libxinerama CONAN_PKG::libxcursor CONAN_PKG::libxi CONAN_PKG::mesa CONAN_PKG::fmt CONAN_PKG::libalsa CONAN_PKG::zlib CONAN_PKG::libxrandr CONAN_PKG::expat CONAN_PKG::libdrm CONAN_PKG::libelf CONAN_PKG::libunwind CONAN_PKG::libxdamage CONAN_PKG::libxshmfence CONAN_PKG::libxxf86vm CONAN_PKG::libxrender CONAN_PKG::libxext CONAN_PKG::libxfixes CONAN_PKG::libpciaccess CONAN_PKG::xz_utils CONAN_PKG::libx11 CONAN_PKG::xtrans CONAN_PKG::libxcb CONAN_PKG::xcb-proto CONAN_PKG::util-macros CONAN_PKG::libxau CONAN_PKG::libpthread-stubs CONAN_PKG::libxdmcp CONAN_PKG::xorgproto CONAN_PKG::xproto)
+    set(CONAN_TARGETS CONAN_PKG::glfw CONAN_PKG::stb CONAN_PKG::glad CONAN_PKG::spdlog CONAN_PKG::lua CONAN_PKG::imgui CONAN_PKG::glm CONAN_PKG::openal CONAN_PKG::nlohmann_json CONAN_PKG::libxinerama CONAN_PKG::libxcursor CONAN_PKG::libxi CONAN_PKG::mesa CONAN_PKG::fmt CONAN_PKG::libalsa CONAN_PKG::libxrandr CONAN_PKG::zlib CONAN_PKG::expat CONAN_PKG::libdrm CONAN_PKG::libelf CONAN_PKG::libunwind CONAN_PKG::libxdamage CONAN_PKG::libxshmfence CONAN_PKG::libxxf86vm CONAN_PKG::libxrender CONAN_PKG::libxext CONAN_PKG::libxfixes CONAN_PKG::libpciaccess CONAN_PKG::xz_utils CONAN_PKG::libx11 CONAN_PKG::xtrans CONAN_PKG::libxcb CONAN_PKG::xcb-proto CONAN_PKG::util-macros CONAN_PKG::libxau CONAN_PKG::libpthread-stubs CONAN_PKG::libxdmcp CONAN_PKG::xorgproto CONAN_PKG::xproto)
 
 endmacro()
 
