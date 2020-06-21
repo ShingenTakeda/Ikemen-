@@ -1,4 +1,3 @@
-
 #include <string>
 #include <map>
 #include <mutex>
@@ -33,15 +32,105 @@ typedef int32_t team_mode;
 typedef std::map<std::string,int32_t> wincnt_map[];
 typedef int32_t loader_state;
 
-const int n,m;
-
 const int MAX_SIMUL = 32,
           FPS = 60,
           MAX_ATTACHED_CHAR = 2,
           P1P3_DIST = 25,
           MP3_SAMPLE_RATE = 44100;
 
+struct OverrideCharData
+{
+    int32_t power;
+    int32_t life;
+    int32_t lifeMax;
+    float lifeRatio;
+    float attackRatio;
+};
 
+struct MatchClearance
+{
+    bool helpers;
+    bool sound;
+    bool projectiles;
+    bool explodes;
+};
+
+struct Preloading
+{
+    bool small;
+    bool big;
+    bool versus;
+    bool stage;
+};
+
+struct SelectChar
+{
+    std::string def;
+    std::string sprite;
+    std::string sound;
+    std::string introStoryBoard;
+    std::string endStoryBoard;
+    int32_t pal[];
+    int32_t palDefault[];
+    int32_t palKeyMaps[];
+    float portraitScale;
+    //Sprite sPortrait;
+    //Sprite lPortrait;
+    //Sprite vsPortrait;
+};
+
+struct SelectStage
+{
+    std::string def;
+    std::string name;
+    std::string spr;
+    std::string attachedCharDef;
+    StageBGM stageBGM[4];
+    //Sprite *stagePortrait;
+    float portraitScale;
+    float xScale;
+    float yScale;
+};
+
+struct StageBGM
+{
+    std::string bgMusic;
+    int32_t bgmVolume;
+    int32_t bgmLoopStart;
+    int32_t bgmLoopEnd;
+};
+
+struct Select
+{
+    int columns, rows;
+    float cellSize[2];
+    float cellScale[2];
+    //Sprite *randomSprite;
+    float randomSCL;
+    SelectChar charList[];
+    SelectStage stageList[];
+    int curStageNo;
+    int selected[][2][2];//->See how to do this: int selected[2][][2](this is in golang) 
+    int selectedStageNo;
+    int16_t sPorTrait[2];
+    int16_t vsPortrait[2];
+    int16_t stagePortait[2];
+    //std::map<std::string, Anim> aPortrait;
+    std::string cDefOverwrite[MAX_SIMUL * 2];
+    std::string sDefOverwrite;
+    StageBGM stageBGM[5];
+};
+
+struct Loader
+{
+    loader_state state;
+
+    //channel this declaration
+    loader_state loadExit;
+
+    //TODO:error is a basic type in golang, try to do the same in c++
+    std::system_error err;
+};
 
 struct System
 {
@@ -263,100 +352,6 @@ struct System
     
 }sys;
 
-struct OverrideCharData
-{
-    int32_t power;
-    int32_t life;
-    int32_t lifeMax;
-    float lifeRatio;
-    float attackRatio;
-};
-
-struct MatchClearance
-{
-    bool helpers;
-    bool sound;
-    bool projectiles;
-    bool explodes;
-};
-
-struct Preloading
-{
-    bool small;
-    bool big;
-    bool versus;
-    bool stage;
-};
-
-struct SelectChar
-{
-    std::string def;
-    std::string sprite;
-    std::string sound;
-    std::string introStoryBoard;
-    std::string endStoryBoard;
-    int32_t pal[];
-    int32_t palDefault[];
-    int32_t palKeyMaps[];
-    float portraitScale;
-    //Sprite sPortrait;
-    //Sprite lPortrait;
-    //Sprite vsPortrait;
-};
-
-struct SelectStage
-{
-    std::string def;
-    std::string name;
-    std::string spr;
-    std::string attachedCharDef;
-    StageBGM stageBGM[4];
-    //Sprite *stagePortrait;
-    float portraitScale;
-    float xScale;
-    float yScale;
-};
-
-struct StageBGM
-{
-    std::string bgMusic;
-    int32_t bgmVolume;
-    int32_t bgmLoopStart;
-    int32_t bgmLoopEnd;
-};
-
-struct Select
-{
-    int columns, rows;
-    float cellSize[2];
-    float cellScale[2];
-    //Sprite *randomSprite;
-    float randomSCL;
-    SelectChar charList[];
-    SelectStage stageList[];
-    int curStageNo;
-    int selected[][2][2];//->See how to do this: int selected[2][][2](this is in golang) 
-    int selectedStageNo;
-    int16_t sPorTrait[2];
-    int16_t vsPortrait[2];
-    int16_t stagePortait[2];
-    //std::map<std::string, Anim> aPortrait;
-    std::string cDefOverwrite[MAX_SIMUL * 2];
-    std::string sDefOverwrite;
-    StageBGM stageBGM[5];
-};
-
-struct Loader
-{
-    loader_state state;
-
-    //channel this declaration
-    loader_state loadExit;
-
-    //TODO:error is a basic type in golang, try to do the same in c++
-    std::system_error err;
-};
-
 //If this doesnt work, try to do it with the struct
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
 
@@ -429,7 +424,7 @@ void Init(System *s, int w, int h) //*sol::state
 
     if(sizeof((*s).externalShaderList) > 0)
     {
-        (*s).externalShaders == new std::string[n];//->make this multidimensional and maybe change the value
+        //(*s).externalShaders == new std::string[n];//->make this multidimensional and maybe change the value
         (*s).externalShaderNames == new std::string[sizeof((*s).externalShaderList)];
         
         &(*s).externalShaders[1] == new std::string[sizeof((*s).externalShaderList)];
