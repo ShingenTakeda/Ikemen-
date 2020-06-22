@@ -32,11 +32,22 @@ typedef int32_t team_mode;
 typedef std::map<std::string,int32_t> wincnt_map[];
 typedef int32_t loader_state;
 
+//maybe change this for an enum
 const int MAX_SIMUL = 32,
           FPS = 60,
           MAX_ATTACHED_CHAR = 2,
           P1P3_DIST = 25,
           MP3_SAMPLE_RATE = 44100;
+
+bool firstWindow = true;
+
+struct Window
+{
+    GLFWwindow *window;
+    std::string title;
+    bool fullscreen;
+    int x, y, w, h;
+};
 
 struct OverrideCharData
 {
@@ -349,7 +360,92 @@ struct System
     Preloading preloading;
 
     //System functions
-    
+
+    //See if this works
+    void framebuffer_size_callback(GLFWwindow* window, int width, int height)
+    {
+        // make sure the viewport matches the new window dimensions; note that width and 
+        // height will be significantly larger than specified on retina displays.
+        glViewport(0, 0, width, height);
+    }
+
+    //TODO: implement this stuff
+    void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);//-> there is a keycllback fuction in input.go, so implement it there
+    void char_mods_fun(GLFWwindow* window, unsigned int codepoint, int mods);
+
+    int NewWindow(std::string title, bool fullscreen, int w, int h, Window *oldWindow)//Maybe change the type of the function 
+    {
+        GLFWwindow *window, *oldW;
+
+        if(oldWindow != nullptr)//either NULL or nullptr, i dont know
+        {
+            oldW = (*oldWindow).window;
+        }
+
+        if(fullscreen)
+        {
+            window = glfwCreateWindow(w, h, title.c_str(), glfwGetPrimaryMonitor(), NULL);
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+        }
+        else
+        {
+            window = glfwCreateWindow(w, h, title.c_str(), NULL, NULL);
+            glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_NORMAL);
+        }
+
+        if(firstWindow)
+        {
+            glfwMakeContextCurrent(window);
+            //glfwSetKeyCallback(window, key_callback(window, ));
+            //glfwSetCharModsCallback(window , char_mods_fun(window,));
+
+            glfwSwapInterval(1);//->If it doesnt work, put after the opengl initialization
+
+            //opengl initialization
+            if(!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
+            {
+                std::cout << "Could not initialize" << std::endl;
+                return -1;
+            }
+            firstWindow = false;
+        }
+    }
+
+    void FullScreenWindow()
+    {
+
+    }
+
+    void TerminateGLFW()
+    {
+        glfwTerminate();
+    }
+
+    int ResetOverrideCharData()
+    {
+        /*
+        //Stuff in ocd is not yet implemented
+        for(int i = 0; i < sizeof(s.ocd); i++)
+        {
+            s.ocd[i] = OverrideCharData
+            {
+                int power = 0;
+                int life = 0;
+                int lifeMax = 0;
+                float lifeRatio = 1.0;
+                float attackRatio = 1.0;
+            }
+        }
+        return //"Something" since golang can deduce the return value
+        */
+    }
+
+    void Init(int w, int h)
+    {
+
+    }
+
+    //int32_t
 }sys;
 
 //If this doesnt work, try to do it with the struct
