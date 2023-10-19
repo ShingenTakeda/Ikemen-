@@ -1,0 +1,10 @@
+{
+    "dependencies": [
+        "sdl2",
+        "imgui",
+        "implot",
+        "imguizmo",
+        "glad",
+        "glm"
+    ]
+}
